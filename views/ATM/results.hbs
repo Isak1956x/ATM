@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+<link rel="stylesheet" href="/assets/css/lib/bootstrap/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+  <div class="d-flex justify-content-center mt-5">
+    <div class="card bg-secondary mt-5" style="width: 50rem;">
+        <div class="card-header text-center bg-primary text-light"><h2>ATM</h2></div>
+        <div class="card-body text-center  text-light">
+            <h5 class="card-title">Thank you for using our services</h5>
+      <ul class="list-group list-group-flush">
+        {{#if result.thousand}}
+    <li class="list-group-item">💵 1000 X {{result.thousand}}</li>
+       {{/if}}
+        {{#if result.fiveHundred}}
+    <li class="list-group-item">💵 500 X {{result.fiveHundred}}</li>
+       {{/if}}
+        {{#if result.twoHundred}}
+        <li class="list-group-item">💵 200 X {{result.twoHundred}}</li>
+       {{/if}}
+        {{#if result.hundred}}
+       <li class="list-group-item">💵 100 X {{result.hundred}}</li>
+       {{/if}}
+  </ul>
+        <div class="d-flex justify-content-center mt-3">
+            <a class="btn btn-warning" href="/atm">Finalizar</a>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</body>
+<script src="/assets/js/lib/bootstrap/bootstrap.min.js"></script>
+</html>
